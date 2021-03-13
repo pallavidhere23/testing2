@@ -1,5 +1,5 @@
 /*DFS (Depth-first search) is technique used for traversing tree or graph. Here backtracking is used for traversal. 
- * In this traversal first the deepest node is visited and then backtracks to it’s parent node if no sibling of that node exist.
+ * In this traversal first the deepest node is visited and then backtracks to itâ€™s parent node if no sibling of that node exist.
  * 
  * Algorithm Inorder(tree)
    1. Traverse the left subtree, i.e., call Inorder(left-subtree)
@@ -37,7 +37,8 @@ public class Dfs_Traversal {
     // Tree Node 
     static class Node { 
         public int data; 
-        public Node left, right;
+        public Node left;
+        public node right;
         
         public Node(int data) 
         { 
@@ -165,6 +166,6 @@ Postorder:9 7 8 6
 /*
 *TIME COMPLEXITY AND SPACE COMPLEXITY
 *Time Complexity: O(n)
-*Auxiliary Space : If we don’t consider size of stack for function calls then O(1) otherwise O(n).
+*Auxiliary Space : If we donâ€™t consider size of stack for function calls then O(1) otherwise O(n).
 /
  */
