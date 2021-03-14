@@ -1,4 +1,5 @@
 """
+
 A binary search or half-interval search algorithm finds the position of a target value within a sorted array.
 The binary search algorithm can be classified as a dichotomies divide-and-conquer search algorithm and executes in logarithmic time.
 
@@ -71,8 +72,7 @@ array : [3, 6, 8, 9]
 Enter Number to be Search2
 2
 False
-"""
-"""
+
 Time And Space Complexity
 Time Copmlexity:-O(logn)
 Space Complexity:-O(1)
