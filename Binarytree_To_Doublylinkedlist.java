@@ -59,20 +59,22 @@ public class Binarytree_To_Doublylinkedlist
 
 
 
-public static Node insertLevelOrder(int[] arr, Node root, int i) 
-{ 
+public static Node insertLevelOrder(int[] arr, final Node root, int i) 
+{   
+   Node d=root;
+   
 //Base case for recursion 
     if (i < arr.length) { 
         Node temp = new Node(arr[i]); 
-        root = temp; 
+        d = temp; 
 
      // insert left child 
-     root.left = insertLevelOrder(arr, root.left, 2 * i + 1); 
+     d.left = insertLevelOrder(arr, d.left, 2 * i + 1); 
 
      // insert right child 
-     root.right = insertLevelOrder(arr, root.right, 2 * i + 2); 
+     d.right = insertLevelOrder(arr, d.right, 2 * i + 2); 
 } 
-return root; 
+return d; 
 }
 
 
@@ -90,18 +92,19 @@ return root;
 
  // Function to in-place convert a given binary tree into a doubly linked list
 
- // `root` —> current node
- // `head` —> head of the doubly linked list (Passed by reference)
- // `prev` —> previously processed node (Passed by reference)
-   public static Node convert(Node curr, Node head, NodeWrapper prev)
-   {
+ // `root` â€”> current node
+ // `head` â€”> head of the doubly linked list (Passed by reference)
+ // `prev` â€”> previously processed node (Passed by reference)
+   public static Node convert(Node curr, final Node head, NodeWrapper prev)
+   { 
+      Node y =head;
      // base case: tree is empty
      if (curr == null) {
-         return head;
+         return y;
      }
 
      // recursively convert the left subtree first
-     head = convert(curr.left, head, prev);
+     y = convert(curr.left, y, prev);
 
      // adjust pointers
      if (prev.node != null)
@@ -116,7 +119,7 @@ return root;
      // if `prev` is null, then update the head of doubly linked list
      // as this is the first node in inorder
      else {
-         head = curr;
+         d = curr;
      }
 
      // after the current node is visited, update the previous pointer
@@ -124,7 +127,7 @@ return root;
      prev.node = curr;
 
      // recursively convert the right subtree
-     return convert(curr.right, head, prev);
+     return convert(curr.right, d, prev);
  }
 
  // In-place convert a given binary tree into a doubly linked list
