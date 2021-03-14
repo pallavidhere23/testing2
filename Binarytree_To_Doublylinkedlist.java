@@ -34,6 +34,8 @@ import java.io.InputStreamReader;
 
 public class Binarytree_To_Doublylinkedlist
 { 
+    private static Node root;
+
   //A class to store a binary tree node
     public class Node
     {
@@ -56,9 +58,8 @@ public class Binarytree_To_Doublylinkedlist
      }
    }
 
-private static Node root;
 
-public Node insertLevelOrder(int[] arr, Node root, int i) 
+public static Node insertLevelOrder(int[] arr, Node root, int i) 
 { 
 //Base case for recursion 
     if (i < arr.length) { 
@@ -89,9 +90,9 @@ return root;
 
  // Function to in-place convert a given binary tree into a doubly linked list
 
- // `root` —> current node
- // `head` —> head of the doubly linked list (Passed by reference)
- // `prev` —> previously processed node (Passed by reference)
+ // `root` â€”> current node
+ // `head` â€”> head of the doubly linked list (Passed by reference)
+ // `prev` â€”> previously processed node (Passed by reference)
    public static Node convert(Node curr, Node head, NodeWrapper prev)
    {
      // base case: tree is empty
