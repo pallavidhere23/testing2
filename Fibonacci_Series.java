@@ -20,7 +20,10 @@ class FibonacciExample1{
                   System.out.println("Enter count : ");
                   int count = sc.nextInt();
                   System.out.println(count);
-                  int t1=0,t2=1,t3,i;    
+                  int t1=0;
+                  int t2=1;
+                  int t3;
+                  int i;    
                   System.out.print(t1+" "+t2);        //printing 0 and 1    
     
                   for(i=2;i<count;++i)               //loop starts from 2 because 0 and 1 are already printed    
@@ -37,7 +40,9 @@ class FibonacciExample1{
 
 /*Method 2: Using Recursion*/
 class FibonacciExample2{  
-    public static int t1=0,t2=1,t3=0;    
+    public static int t1=0;
+    public static int t2=1;
+    public static int t3=0;    
     public static void printFibonacci(int count){    
        if(count>0){    
             t3 = t1 + t2;    
