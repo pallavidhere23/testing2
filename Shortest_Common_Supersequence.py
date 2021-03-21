@@ -1,8 +1,7 @@
 """
-A dynamic programming based Python program print 
-shortest supersequence of two strings
+
+A dynamic programming based Python program print shortest supersequence of two strings.
 """
-  
 # Function to return an SCS of substrings `X[0…m-1]`, `Y[0…n-1]`
 def SCS(X, Y, m, n, T):
  
@@ -98,4 +97,4 @@ if __name__ == '__main__':
  TIME AND SPACE COMPLEXITY
  Time Complexity: O(nm)
  Space Complexity : O(nm)
-"""
+
