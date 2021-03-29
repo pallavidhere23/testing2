@@ -19,7 +19,7 @@ class Median_Of_Two_Sorted_Arrays{
       public static int findMedianSortedArrays(int []a,int n,int []b, int m)
       {
           int min_index = 0, 
-          max_index = n, i, j;
+          int max_index = n, i, j;
        
        while (min_index <= max_index)
        {
