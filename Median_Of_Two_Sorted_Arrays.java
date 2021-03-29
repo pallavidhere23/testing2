@@ -18,8 +18,10 @@ class Median_Of_Two_Sorted_Arrays{
    // Function to find median of given two sorted arrays
       public static int findMedianSortedArrays(int []a,int n,int []b, int m)
       {
-          int min_index = 0, 
-          int max_index = n, i, j;
+          int min_index = 0; 
+          int max_index = n;
+          int i;
+          int j;
        
        while (min_index <= max_index)
        {
